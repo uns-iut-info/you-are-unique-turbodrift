@@ -289,19 +289,35 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.4.0.tgz#84481462df73fab0cb34a1ba4947cf15f3349bf1"
-  integrity sha512-d3y7HE/5kMRnn2dBab26+kaEpYwlowf/mg1dy+MNufmSQCURaXxSUkalUSWs634XBJVe6K/NAbVszIT8RMXKVg==
+"@babylonjs/core@^5.5.6":
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.5.6.tgz#adfbaade8ca9a55a89c83d61f9cc51b22520d0d8"
+  integrity sha512-0QgN1ugUxYsWoXX8oHL8TKn5dbKYJrjYKPfvyoid9J5WjWLn4JDLM7laNQqfjuOVmHiDZ8gE+BjV6kbSkdL0fg==
   dependencies:
     tslib "^2.3.1"
 
-"@babylonjs/gui@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-5.4.0.tgz#544b4acd0665314fc4513ce6a5d190720ecf9b8e"
-  integrity sha512-BdSlOUFmPy3ENHzD6OwHuOF4NgutyROj53KjklHHTxEEYNDGBgiJeKI689uBKT16dI/IV9IiL0Tk3FEPs4bEbA==
+"@babylonjs/core@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.6.0.tgz#ab3613b8178e84868955ceaaf3b14fc8d6a179a6"
+  integrity sha512-CNoIRgKo0pbGqLmrntYIQYF/Plte18Fi3b/fTAKMZa+yClX9CQPr8R5v2r91YDRt54CitiSSMu9SRIuehMhQuA==
   dependencies:
-    "@babylonjs/core" "^5.4.0"
+    tslib "^2.3.1"
+
+"@babylonjs/gui@^5.5.6":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@babylonjs/gui/-/gui-5.6.0.tgz#91d43ccb1914010c6ee3550aaad02abfbee35557"
+  integrity sha512-GdodagLUV5jYhKdMwCSS9pnPvbTllF+JownenDQi9TYvm3TqYij5TBCk+l0Nl6pyJ/uMyCgFO1SdgQcKgItJWw==
+  dependencies:
+    "@babylonjs/core" "^5.6.0"
+    tslib "^2.3.1"
+
+"@babylonjs/loaders@^5.5.6":
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.5.6.tgz#aa07236b046037cc06ae7e06d6e0c49f177f11f0"
+  integrity sha512-Xg9jwNACth/XiFRAA1QGOk4QjbfVaFstlVI+EPZx8w3vsIMwTUlNAm3O9HsNXfX327AmgsrGs+dbJMI21CtSbQ==
+  dependencies:
+    "@babylonjs/core" "^5.5.6"
+    babylonjs-gltf2interface "^5.5.6"
     tslib "^2.3.1"
 
 "@jridgewell/gen-mapping@^0.1.0":
@@ -371,6 +387,11 @@ anymatch@~3.1.2:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+babylonjs-gltf2interface@^5.5.6:
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.5.6.tgz#eccc532791b689437fb60659b8d1070d65beed5a"
+  integrity sha512-fw6BtVPfnEIAJVWdrGKReXiurVPFNqtB1Wp4XGv9DTRCpbY9YG/FWvLlMLRtyjxSwmdLzqHYblI3xi3xDUSClA==
 
 babylonjs-hook@^0.1.0:
   version "0.1.1"

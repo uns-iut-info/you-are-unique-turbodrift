@@ -1,5 +1,15 @@
 import { useEffect, useRef } from "react";
-import { Engine, Scene } from "@babylonjs/core";
+import { Engine } from "@babylonjs/core/Engines/engine"
+import { Scene } from "@babylonjs/core/scene"
+import { SceneLoader } from "@babylonjs/core/Loading/sceneLoader"
+
+import "@babylonjs/loaders"
+
+
+// import "@babylonjs/core/Loading/loadingScreen";
+// import "@babylonjs/loaders/glTF";
+// import "@babylonjs/core/Materials/standardMaterial";
+// import "@babylonjs/core/Materials/Textures/Loaders/envTextureLoader";
 
 export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onSceneReady, ...rest}) => {
   const reactCanvas = useRef(null);
@@ -12,6 +22,7 @@ export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, s
 
     const engine = new Engine(canvas, antialias, engineOptions, adaptToDeviceRatio);
     const scene = new Scene(engine, sceneOptions);
+
     if (scene.isReady()) {
       onSceneReady(scene);
     } else {
@@ -21,7 +32,23 @@ export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, s
     engine.runRenderLoop(() => {
       if (typeof onRender === "function") onRender(scene);
       scene.render();
+      
     });
+
+    SceneLoader.ImportMesh(
+      "",
+      "./models/",
+      "map.glb",
+      scene,
+      m => {
+        console.log(m)
+      }
+    )
+
+    scene.onNewMaterialAddedObservable.add(function(mat) {
+      mat.backFaceCulling = false;
+      });
+
 
     const resize = () => {
       scene.getEngine().resize();
