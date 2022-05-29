@@ -38,7 +38,7 @@ export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, s
     SceneLoader.ImportMesh(
       "",
       "./models/",
-      "map.glb",
+      "akina.glb",
       scene,
       m => {
         console.log(m)

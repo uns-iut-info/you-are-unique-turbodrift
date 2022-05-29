@@ -21,13 +21,13 @@ const onSceneReady = (scene) => {
   // Default intensity is 1. Let's dim the light a small amount
   light.intensity = 0.7;
 
-  const groundSize = 400;
+  // const groundSize = 400;
   
-  const ground = MeshBuilder.CreateGround("ground", {width: groundSize, height: groundSize}, scene);
-  const groundMaterial = new StandardMaterial("ground", scene);
-  groundMaterial.diffuseColor = new Color3(0.75, 1, 0.25);
-  ground.material = groundMaterial;
-  ground.position.y = -1.5;
+  // const ground = MeshBuilder.CreateGround("ground", {width: groundSize, height: groundSize}, scene);
+  // const groundMaterial = new StandardMaterial("ground", scene);
+  // groundMaterial.diffuseColor = new Color3(0.75, 1, 0.25);
+  // ground.material = groundMaterial;
+  // ground.position.y = -1.5;
 };
 
 /**
