@@ -1,20 +1,11 @@
 import { FreeCamera, Vector3, HemisphericLight, MeshBuilder, ArcRotateCamera, StandardMaterial, Color3  } from "@babylonjs/core";
 import { SceneComponent } from "./SceneComponent"; // uses above component in same directory
+
 import './App.scss'
 
 let box;
 
 const onSceneReady = (scene) => {
-  	// camera
- 	 const camera = new ArcRotateCamera("camera1",  0, 0, 20, new Vector3(0, 0, 0), scene);
-  	camera.setPosition(new Vector3(11.5, 3.5, 0));	
-
-
-  const canvas = scene.getEngine().getRenderingCanvas();
-
-  // This attaches the camera to the canvas
-  camera.attachControl(canvas, true);
-
   // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
   const light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
 
